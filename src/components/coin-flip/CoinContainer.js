@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { choice } from "./helper";
+import { choice } from "../helper";
 import Coin from "./Coin";
 
 class CoinContainer extends Component {
