@@ -57,10 +57,7 @@ class LightsBoard extends Component {
     this.setState({ board, hasWon });
   }
 
-  render() {
-    if (this.state.hasWon) {
-      return <h1>You Won!!</h1>;
-    }
+  renderTable() {
     let tblBoard = [];
     for (let i = 0; i < this.props.nrows; i++) {
       let row = [];
@@ -76,16 +73,30 @@ class LightsBoard extends Component {
       }
       tblBoard.push(<tr key={i}>{row}</tr>);
     }
+    return (
+      <table className="lights-board">
+        <tbody>{tblBoard}</tbody>
+      </table>
+    );
+  }
 
+  render() {
     return (
       <div>
-        <div className="Board-title">
-          <div className="neon-orange">Lights</div>
-          <div className="neon-blue">OUT!</div>
-        </div>
-        <table className="lights-board">
-          <tbody>{tblBoard}</tbody>
-        </table>
+        {this.state.hasWon ? (
+          <div className="winner">
+            <span className="neon-orange">YOU</span>
+            <span className="neon-blue">WIN!</span>
+          </div>
+        ) : (
+          <div>
+            <div className="Board-title">
+              <div className="neon-orange">Lights</div>
+              <div className="neon-blue">OUT!</div>
+            </div>
+            {this.renderTable()}
+          </div>
+        )}
       </div>
     );
   }
