@@ -31,7 +31,8 @@ class Note extends Component {
   }
 
   render() {
-    return <ShoppingListform addItem={this.addItem} />;
+    // return <ShoppingListform addItem={this.addItem} />;
+    return <div></div>
   }
 }
 

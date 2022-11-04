@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import LightsOutGame from "./components/games/LightsOut/LightsOutGame";
+import ColorBoxContainer from "./components/forms/formsExercise/ColorBoxContainer";
 
 function App() {
   
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="App">
       {/* <h1>App Heading</h1> */}
-      <LightsOutGame />
+      <ColorBoxContainer />
     </div>
   );
 }
