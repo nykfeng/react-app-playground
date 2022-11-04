@@ -1,15 +1,12 @@
 import "./App.css";
-import ColorBoxContainer from "./components/ColorBoxClicker/ColorBoxContainer";
-import ColorBox from "./components/ColorBoxClicker/ColorBox";
-import WiseSquare from "./components/WiseSquare/WiseSquare";
 import React from "react";
+import LightsOutGame from "./components/games/LightsOut/LightsOutGame";
 
 function App() {
   return (
     <div className="App">
       <h1>App Heading</h1>
-      <WiseSquare />
-
+      <LightsOutGame />
     </div>
   );
 }

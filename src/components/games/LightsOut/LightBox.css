@@ -1,0 +1,12 @@
+.lightCell {
+  width: 100px;
+  height: 100px;
+}
+
+.lightCell[light="on"] {
+  background-color: white;
+}
+
+.lightCell[light="off"] {
+  background-color: darkgray;
+}
