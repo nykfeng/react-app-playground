@@ -5,7 +5,7 @@ import LightsOutGame from "./components/games/LightsOut/LightsOutGame";
 function App() {
   return (
     <div className="App">
-      <h1>App Heading</h1>
+      {/* <h1>App Heading</h1> */}
       <LightsOutGame />
     </div>
   );

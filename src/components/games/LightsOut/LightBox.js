@@ -4,9 +4,6 @@ import "./LightBox.css";
 class LightBox extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLit: "off",
-    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -15,7 +12,13 @@ class LightBox extends Component {
   }
 
   render() {
-    return <div className="lightCell" light={this.props.isLit}></div>;
+    return (
+      <td
+        className="lightCell"
+        light={this.props.isLit ? "on" : "off"}
+        onClick={this.handleClick}
+      ></td>
+    );
   }
 }
 
