@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NewTodoForm from "./NewTodoForm";
 import Todo from "./Todo";
+import "./TodoList.css";
 
 class TodoList extends Component {
   constructor(props) {
@@ -75,10 +76,13 @@ class TodoList extends Component {
     });
 
     return (
-      <div className="todo-list-container">
-        <h1>Todo List!!</h1>
+      <div className="todo-list-container TodoList">
+        <h1>
+          Get To Work! <span>An Animated Todo List Made With React Hooks.</span>
+        </h1>
+
+        <ul>{todos}</ul>
         <NewTodoForm createTodo={this.create} />
-        {todos}
       </div>
     );
   }
